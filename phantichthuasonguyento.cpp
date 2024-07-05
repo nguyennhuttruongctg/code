@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define ll long long
 using namespace std;
 
 bool snt(ll n){
@@ -10,10 +11,10 @@ bool snt(ll n){
     if (n%i==0 || n%(i+2)==0) return false;
     return true;
 }
-ll a[M2C],b[M2C],l=0;
+ll a[1000],b[1000],l=0;
 
 int main(){
-    ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+
     ll n,dem=0; cin>>n;
     if (snt(n)) {
         cout<<1<<'\n';
@@ -38,7 +39,7 @@ int main(){
         b[l]=1;
         l++;
     }
-
+    
     cout<<l<<'\n';
     for (int i=0;i<l;i++)
     cout<<a[i]<<" "<<b[i]<<'\n';
