@@ -9,7 +9,7 @@
 using namespace std;
 const int lim=1e6+5,M2C=1e3;
 
-ll a[lim],b[lim];
+ll x[lim],y[lim];
 
 int main(){
     ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
@@ -18,16 +18,16 @@ int main(){
     #endif
 
     int n; cin>>n;
-    for (int i=0;i<n;i++) cin>>a[i]>>b[i];
+    for (int i=0;i<n;i++) cin>>x[i]>>y[i];
 
-    a[n]=a[0];
-    b[n]=b[0];
-    ll x=0,y=0;
+    x[n]=x[0];
+    y[n]=y[0];
+    ll a=0,b=0;
     for (int i=0;i<n;i++) {
-        x+=a[i]*b[i+1];
-        y+=b[i]*a[i+1];
+        a+=x[i]*y[i+1];
+        b+=y[i]*x[i+1];
     }
-    ld s=abs((x-y)/2.0);
+    ld s=abs((a-b)/2.0);
     cout<<fixed<<setprecision(3)<<s;
 
     return 0;
