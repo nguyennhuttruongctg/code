@@ -28,6 +28,7 @@ int main(){
     #endif
 
     ll a,n,mod; cin>>a>>n;
+    // (a^n)%MOD
     mod=1e9+7;
     cout<<powMOD(a,n,mod);
 
