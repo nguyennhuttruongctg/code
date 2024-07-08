@@ -20,11 +20,22 @@ int main(){
     int n,res=0; cin>>n;
     for (int i=1;i<=n;i++) cin>>a[i];
 
+    /// n<=5000
+
     for (int i=1;i<=n;i++) {
         l[i]=1;
         for (int j=1;j<i;j++)
         if (a[i]>a[j] && l[j]+1>l[i]) l[i]=l[j]+1;
         res=max(res,l[i]);
+    }
+    cout<<res;
+
+    /// n<=30000
+
+    for (int i=1;i<=n;i++) {
+        int j=lower_bound(l+1,l+res+1,a[i])-l-1;
+        l[j+1]=a[i];
+        res=max(res,j+1);
     }
     cout<<res;
 
