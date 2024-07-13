@@ -11,8 +11,7 @@ const int lim=1e6+5,M2C=1e3,MOD=1e9+7;
 
 int x[100],n;
 void xuat(){
-    for (int i=1;i<=n;i++)
-    cout<<x[i];
+    for (int i=1;i<=n;i++) cout<<x[i];
     cout<<'\n';
 }
 
