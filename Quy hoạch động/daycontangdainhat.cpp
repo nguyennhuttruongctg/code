@@ -33,9 +33,9 @@ int main(){
     /// n<=30000
 
     for (int i=1;i<=n;i++) {
-        int j=lower_bound(l+1,l+res+1,a[i])-l-1;
-        l[j+1]=a[i];
-        res=max(res,j+1);
+        int j=lower_bound(l+1,l+res+1,a[i])-l;
+        l[j]=a[i];
+        res=max(res,j);
     }
     cout<<res;
 
