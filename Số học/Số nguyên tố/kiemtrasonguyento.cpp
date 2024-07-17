@@ -1,6 +1,4 @@
 #include <bits/stdc++.h>
-#include <cstdlib> // for rand() and srand()
-#include <ctime> // for time()
 #define ll long long
 #define ld long double
 #define fi first
