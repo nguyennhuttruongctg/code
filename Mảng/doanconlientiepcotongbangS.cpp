@@ -27,7 +27,7 @@ int main(){
 	if (t[r]>=s) {
 		int k=upper_bound(t,t+1+n,t[r]-s)-t-1;
 		if (t[r]-t[k]==s) res=max(res,(r-k)*1LL);
-    // >= bỏ if ra
+    		// >= bỏ if ra
 	}
 	cout<<res;
 	
